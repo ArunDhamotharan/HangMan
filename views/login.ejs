@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hangman - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <input type="checkbox" id="flip">
+      <div class="cover">
+        <div class="front">
+          <img src="/images/login.jpg" alt="">
+          <div class="text">
+            <span class="text-1">You are just one click away <br> to play the game</span>
+            <span class="text-2">Let's Hang the man</span>
+          </div>
+        </div>
+        <div class="back">
+            <img src="/images/download.jpg" alt="">
+            <div class="text">
+              <span class="text-1">Join fast  <br> to hang the man</span>
+              <span class="text-2">Let's get started</span>
+            </div>
+          </div>
+      </div>
+      <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+            <form method="post" action="/login">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="text"  id="email" name="email"  placeholder="Enter your username" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input type="password"  name="password" type="password" placeholder="Enter your password" required>
+                </div>
+                <!-- <div class="text"><a href="#">Forgot password?</a></div> -->
+                <div class="button input-box">
+                  <input type="submit" value="Submit">
+                </div>
+                <div class="text sign-up-text">Don't have an account? <a href="javascript:void(0)" onclick="flipForms()">Signup now</a></div>
+              </div>
+            </form>
+          </div>
+          
+          <div class="signup-form">
+            <div class="title">Signup</div>
+            <form method="post" action="/signup">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="name" name="name" placeholder="Enter your username" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input id="password" name="password" type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="button input-box">
+                  <input type="submit" value="Submit">
+                </div>
+                <div class="text sign-up-text">Already have an account? <a href="javascript:void(0)" onclick="flipForms()">Login now</a></div>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function flipForms() {
+        const flipCheckbox = document.getElementById('flip');
+        flipCheckbox.checked = !flipCheckbox.checked;
+      }
+    </script>
+  </body>
+</html>
